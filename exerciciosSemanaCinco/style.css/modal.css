@@ -1,0 +1,62 @@
+#modal {
+    position: fixed;
+    inset: 0;
+    background-color: #000c;
+    z-index: 20;
+    display: none;
+    place-items: center;
+  }
+  
+  #modal-wrapper {
+    display: flex;
+    background-color: var(--clr-dark-300);
+    color: white;
+    padding: 1.5rem;
+    width: 80%;
+    max-height: 60vh;
+    border-radius: 0.25rem;
+  }
+  
+  #modal-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  
+  #modal-wrapper label {
+    margin-bottom: 0.25rem;
+  }
+  
+  #modal-wrapper form > div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #modal-wrapper input,
+  #movie-register-btn {
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: var(--clr-dark-100);
+    color: var(--clr-light-900);
+    transition: all 200ms;
+  }
+  
+  #movie-register-btn {
+    background-color: var(--clr-star);
+    color: var(--clr-dark-100);
+    font-weight: bolder;
+  }
+  
+  #movie-register-btn:hover {
+    filter: brightness(1.15);
+    cursor: pointer;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    #modal-wrapper {
+      width: 40%;
+    }
+  }
+  

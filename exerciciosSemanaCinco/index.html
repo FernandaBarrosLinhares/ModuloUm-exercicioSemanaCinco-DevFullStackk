@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css"/>
+    <title>CineFlix</title>
+</head>
+<body>
+    <div id="modal">
+        <div id="modal-wrapper">
+          <form>
+            <div>
+            <label for="movie-title-imput">Titulo</label>
+            <imput 
+            type="text" 
+            name="movie-title-imput" 
+            id="movie-title-imput"
+            />
+            <!-- <label for="movie-score-imput">Nota</label>
+            <input
+            type="numeber"
+            min="0"
+            max="5"
+            name="movie-score-imput"
+            id="movie-score-imput"
+            /> -->
+
+            <label for="movie-duration-input">Duração em minutos</label>
+            <input
+            type="number"
+            min="0"
+            name="movie-duration-input"
+            id="movie-duration-input"
+            />
+            </div>
+       
+<!--                 
+                Cadastrar
+            
+            </button>
+        </form>     <button onclick="registerMovie()"id="movie-register-btn">
+    </section> -->
+
+    <!-- <input
+    type="text"
+    name="search-input"
+    id="search-input"
+    placeholder="Buscar"
+    /> -->
+</div>
+<div style="display: none; position: absolute">
+  <label for="movie-score-input">Nota</label>
+  <input
+    type="number"
+    min="0"
+    max="5"
+    name="movie-score-input"
+    id="movie-score-input"
+  />
+</div>
+<div>
+    <label>Nota</label>
+    <div id="form-interactive-score"></div>
+  </div>
+  <button onclick="registerMovie()" id="movie-register-btn">
+    Cadastrar
+  </button>
+</form>
+</div>
+
+
+    <header id="user-section">
+      <p id="time-watched">Você assistiu <span>0 minutos</span></p>
+    </header>
+
+
+<header id="user-section">
+    <p id="time-watched">Você assistiu <span>0 minutos</span></p>
+  </header>
+</div>
+
+    <p id="time-watched">Você assistiu <span>0 minutos</span></p>
+
+    <main>
+        <div id="movies-container"></div>
+    </main>
+
+<div class="card"id="${movie.title.tolowerCase()}">
+   
+    <div class="ïmage-wrapper">
+        <img
+        src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/everything-everywhere-all-at-once_mpmkbaml_500x749.jpg?v=1649865955%22"
+        />
+        <div class="movie-icons">
+            <button id="watched-btn" class="icon-btn"
+onclick="toogleWatched(`${
+        movie.title
+    }')">
+        ${movie.watched ? openEyesSVG : closedEyesSVG}
+    </button>
+    <button id="favorite-btn" class="icon-btn"
+onclick="toggleFavorite"(`${
+        movie.title
+
+        }`)>
+
+        ${movie.favorite ? colredHeartSVG : heartSVG}
+</button>
+        </div>
+    <div class="movie-info">
+        <h4 class="move-title">${movie.title}</h4>
+        <div class="movie-details">
+           <span class="duration">Duração: ${movie.duration}</span> 
+           <div class="score">
+            &{getScore(movie.score)}
+           </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+    <main>
+        <div class="container">
+            <input
+              type="search"
+              name="search-input"
+              id="search-input"
+              placeholder="Buscar"
+            />
+          </div>
+        <div id="movies-container">
+           <button onclick="add-movie-btn" class="card">
+            <i class="ph-plus"></i>
+        </button>
+        </div>
+    </main>
+    <script type="module" src="src/scripts/main.js"></script>
+</body>
+</html>
